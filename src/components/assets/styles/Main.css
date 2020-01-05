@@ -1,0 +1,41 @@
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 40px;
+    align-items: start;
+    justify-items: center;
+}
+.main::after {
+    box-sizing: border-box;
+    content: '';
+    border-top: 40px solid red;
+    border-right: var(--screenUser) solid transparent;
+    width: 100%;
+    grid-column: 1 / 3;
+}
+.main img {
+    height: 80%;
+}
+
+.mainText h1 {
+    font-size: 2.5rem;
+}
+.mainText h1, .mainText span {
+    color: var(--second-color);
+}
+.mainText p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.mainText {
+    width: 80%;
+    height: 80%;
+}
+.mainText input {
+    background: none;
+    border: 2px solid var(--second-color);
+    color: var(--second-color);
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;;
+}
