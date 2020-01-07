@@ -15,14 +15,12 @@ body {
     color: var(--main-font-color);
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     width: 100%;
-    height: 100vh;
     display: flex;
     --screenUser: 300px;
 }
 
 #app {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 30vh 60vh 10vh;
+    display: flex;
+    flex-wrap: wrap;
 }

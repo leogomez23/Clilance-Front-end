@@ -8,8 +8,8 @@ const Main = () => (
         <div className="mainText">
             <h1>¡Muy Pronto!</h1>
             <p>¿Quieres <span>asegurar</span> el dinero de un proyecto antes de comenzarlo como Freelance o cliente?</p>
-            <p>Estamos trabajando una plataforma que te permitira asegurar tu dinero antes de poner cualquier proyecto en marcha.</p>
-            <input type="button" value="Conoce Más y Como Puedes Ayudar"/>
+            <p>Estamos trabajando en una plataforma que te permitira asegurar tu dinero antes de poner cualquier proyecto en marcha.</p>
+            <a href="#">Conoce Más y Como Puedes Ayudar</a>
         </div>
     </div>
 )
@@ -17,13 +17,6 @@ const Main = () => (
 const screen = window.screen.width;
 
 const property = document.querySelector('body')
-
-// window.CSS.registerProperty({
-//     name: '--screenUser',
-//     syntax: '<string>',
-//     inherits: true,
-//     initialValue: `${screen}px`,
-// })
 
 property.style.setProperty('--screenUser', `${screen}px`)
 
