@@ -2,7 +2,6 @@
     text-align: center;
     width: 100%;
     font-size: 1.5rem;
-    /* padding: 30px 0 0 0; */
     position: relative;
     top: -50px;
 }
@@ -21,6 +20,16 @@
     position: relative;
     top: -108px;
 }
+.footer p a {
+    transition: .3s;
+
+}
+.footer p a:hover {
+    color: var(--second-color)
+}
+.svg {
+    fill: var(--main-font-color);
+}
 
 .redes {
     display: flex;
@@ -34,4 +43,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .3s;
+}
+.redes a:hover {
+    opacity: .5;
 }

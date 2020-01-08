@@ -14,13 +14,4 @@ const Main = () => (
     </div>
 )
 
-const screen = window.screen.width;
-
-const property = document.querySelector('body')
-
-property.style.setProperty('--screenUser', `${screen}px`)
-
-console.log(property)
-
-
 export default Main;

@@ -40,9 +40,10 @@
 .mainText a {
     border: 2px solid var(--second-color);
     color: var(--second-color);
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: bold;
     padding: 1rem 2rem;
     border-radius: 10px;
     text-decoration: none;
+    white-space: nowrap;
 }

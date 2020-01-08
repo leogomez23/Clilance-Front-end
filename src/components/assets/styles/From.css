@@ -1,6 +1,6 @@
 .formContainer {
     width: 100%;
-    background-color: #000;
+    background-color: var(--main-font-color);
     position: relative;
     top: -90px;
     display: flex;
@@ -10,10 +10,12 @@
 
 .formText {
     margin: 80px 0 10px 0;
+    color: var(--main-color)
 }
 .formText p {
     text-align: center;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 .formText span {
     color: var(--second-color);
@@ -38,7 +40,7 @@
     grid-area: select;
 }
 .selectCountry option {
-    background-color: #000; 
+    background-color: var(--main-font-color); 
 }
 .name {
     grid-area: name;
@@ -52,24 +54,43 @@
 }
 
 .formItem {
-    border: 3px solid var(--main-font-color);
-    color: var(--main-font-color);
+    border: 3px solid var(--main-color);
+    color: var(--main-color);
     border-radius: 10px;
     background-color: rgba(0,0,0,0); 
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
-    opacity: .5;
+    opacity: .7;
     padding: 0;
     width: 100%;
     box-sizing: border-box;
     outline: none;
+    transition: .3s;
+}
+.formItem:hover {
+    opacity: 1;
+}
+.formItem:focus {
+    opacity: 1;
+}
+.formItem:-internal-autofill-selected {
+    background-color: rgba(0,0,0,1); 
 }
 .formItem::placeholder {
     text-align: center;
-    color: var(--main-font-color);
+    color: var(--main-color);
 }
 .formItem:placeholder-shown {
     text-align: center;
-    color: var(--main-font-color);
+    color: var(--main-color);
+}
+
+.errorValidation {
+    border-color: #FF0000;
+    opacity: 1;
+}
+.successValidation {
+    border-color: #00ff00;
+    opacity: 1;
 }
