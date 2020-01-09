@@ -55,14 +55,9 @@ const Form = () => {
             validationStyle(e.target, true);
         }else {
             validationStyle(e.target, false);
-            alert("Complete todos los campos para poder enviar")
+            alert("Complete todos los campos correctamente para poder enviar")
         }
     }
-
-    useEffect(() => {
-        console.log("Select esta en: "+validationSelect);
-        console.log("Name esta en: "+validationName);
-    }, [validationSelect, validationName]);
 
     return(
     <div className="formContainer">

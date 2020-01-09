@@ -12,6 +12,6 @@ const Main = () => (
             <a href="#">Conoce Más y Como Puedes Ayudar</a>
         </div>
     </div>
-)
+);
 
 export default Main;

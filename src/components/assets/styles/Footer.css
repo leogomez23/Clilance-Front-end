@@ -48,3 +48,21 @@
 .redes a:hover {
     opacity: .5;
 }
+
+/*Responsive*/
+
+@media screen and (max-width: 426px) {
+    .footer{
+        top: 0;
+        margin-bottom: 30px;
+        font-size: 1rem;
+    }
+    .footer::before {
+        top: -99px;
+    }
+}
+@media screen and (max-width: 361px) {
+    .footer::before {
+        top: -95px;
+    }
+}

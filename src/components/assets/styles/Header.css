@@ -9,3 +9,11 @@
 .header img {
     height: 100%;
 }
+
+/*Responsive*/
+
+@media screen and (max-width: 426px) {
+    .header {
+        height: 20vh;
+    }
+}

@@ -7,6 +7,8 @@
     min-height: 400px;
     height: 65vh;
     overflow: hidden;
+    grid-template-areas: "banner mainText"
+                         "mainAfter mainAfter";
 }
 .main::after {
     box-sizing: border-box;
@@ -14,13 +16,14 @@
     border-top: 40px solid var(--main-color);
     border-right: var(--screenUser) solid transparent;
     width: 100%;
-    grid-column: 1 / 3;
     z-index: 1;
     position: relative;
     top: -1px;
+    grid-area: mainAfter;
 }
 .main img {
     height: 350px;
+    grid-area: banner;
 }
 
 .mainText h1 {
@@ -36,9 +39,10 @@
 .mainText {
     width: 80%;
     height: 80%;
+    grid-area: mainText;
 }
 .mainText a {
-    border: 2px solid var(--second-color);
+    border: 3px solid var(--second-color);
     color: var(--second-color);
     font-size: 1.4rem;
     font-weight: bold;
@@ -46,4 +50,61 @@
     border-radius: 10px;
     text-decoration: none;
     white-space: nowrap;
+}
+.mainText a:hover {
+    animation: parpadeo 1s linear infinite alternate;
+}
+
+@keyframes parpadeo {
+    0% {
+        color: var(--second-color);
+    }
+    60%{
+        color: var(--main-font-color);
+    }
+    100% {
+        opacity: .5;
+        color: var(--main-font-color);
+    }
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1025px) {
+    .mainText a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 40px;
+        grid-template-areas: "banner"
+                             "mainText"
+                             "mainAfter";
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .main {
+        height: 800px;
+        grid-template-rows: 300px 1fr 40px;
+    }
+    .main img {
+        width: 100%;
+        height: 300px;
+    }
+    .mainText a {
+        font-size: .9rem;
+    }
+}
+@media screen and (max-width: 361px) {
+    html {
+        font-size: 13px;
+    }
+    .main {
+        height: 700px;
+    }
 }
